@@ -1,0 +1,14 @@
+:root {
+  --padding-x: 2rem;
+  --color-danger: rgb(239, 68, 68);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
