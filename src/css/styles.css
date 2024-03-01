@@ -1,3 +1,7 @@
+:root {
+  --padding-x: 2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,18 +12,45 @@ body {
   font-family: Arial, sans-serif;
 }
 
-#wrapper {
-  padding: 2rem;
+#app-toolbar {
+  padding: 1rem var(--padding-x);
+  background-color: rgb(29 78 216 / 1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#app-toolbar h2 {
+  font-size: 1.75rem;
+}
+
+.reload {
+  width: 30px;
+  height: 30px;
+  background: url("../assets/images/reload.svg") no-repeat;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@keyframes reload {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+main {
+  padding: var(--padding-x);
 }
 
 #cards-user {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 2rem;
 }
 
 .card-user {
-  width: 228px;
   display: flex;
   flex-direction: column;
   gap: 5px;
