@@ -2,7 +2,7 @@ export const togglePreloader = isNone => {
   const reloadBtn = document.getElementById('reload');
 
   setTimeout(() => {
-    reloadBtn.style.animation = isNone ? 'none' : 'reload 600ms infinite linear'
+    reloadBtn.style.animation = isNone ? 'none' : 'rotate 600ms infinite linear'
     reloadBtn.style.cursor = isNone ? 'pointer' : 'not-allowed';
     reloadBtn.disabled = !isNone;
   }, isNone ? 500 : 0);

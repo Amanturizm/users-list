@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Users List</title>
   <link href="css/global.css" rel="stylesheet"/>
+  <link href="css/animations.css" rel="stylesheet"/>
   <link href="css/header.css" rel="stylesheet"/>
   <link href="css/main.css" rel="stylesheet"/>
 </head>
 <body>
   <header id="app-toolbar">
     <h2>Users List</h2>
+
     <button id="reload"></button>
   </header>
   <main>
@@ -18,6 +20,17 @@
       <img class="info-icon" src="assets/images/info.svg" alt="info-icon"/>
       <p class="alert-error-message"></p>
     </div>
+
+    <div id="sort">
+      <p>Sort by</p>
+      <span></span>
+
+      <menu class="sort-menu">
+        <menuitem>username</menuitem>
+        <menuitem>email</menuitem>
+      </menu>
+    </div>
+
     <div id="cards-user"></div>
   </main>
 </body>

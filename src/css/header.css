@@ -19,9 +19,3 @@
   outline: none;
   cursor: pointer;
 }
-
-@keyframes reload {
-  100% {
-    transform: rotate(1turn);
-  }
-}

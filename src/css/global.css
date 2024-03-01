@@ -1,6 +1,7 @@
 :root {
   --padding-x: 2rem;
   --color-danger: rgb(239, 68, 68);
+  --borderWidth-thicker: max(4px, 0.25rem);
 }
 
 * {

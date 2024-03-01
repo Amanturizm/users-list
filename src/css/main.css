@@ -2,6 +2,8 @@ main {
   padding: var(--padding-x);
 }
 
+/* Alert */
+
 #alert-error {
   position: absolute;
   top: 95px;
@@ -20,35 +22,79 @@ main {
   border-radius: 8px;
   background-color: var(--color-danger);
   transition: opacity 1s linear;
-  animation: opacity 1s linear, translate 500ms linear;
+  animation: opacity 1s linear, translateFromRightToLeft 500ms linear;
 }
 
 #alert-error .info-icon {
   height: 100%;
 }
 
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Sort */
+
+#sort {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: min-content;
+  cursor: pointer;
+  position: relative;
 }
 
-@keyframes translate {
-  from {
-    transform: translateX(150%);
-  }
-  to {
-    transform: translateX(0);
-  }
+#sort * {
+  white-space: nowrap;
 }
+
+#sort span {
+  border-bottom-color: #0000;
+  border-left-color: #0000;
+  border-right-color: #0000;
+  border-style: solid;
+  border-width: var(--borderWidth-thicker, max(4px, 0.25rem)) var(--borderWidth-thicker, max(4px, 0.25rem)) 0;
+  content: "";
+  display: inline-block;
+  height: 0;
+  vertical-align: middle;
+  width: 0;
+}
+
+.hover .sort-menu {
+  display: flex;
+  opacity: 1;
+}
+
+.sort-menu {
+  position: absolute;
+  bottom: -70px;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  color: #000;
+  overflow: hidden;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 250ms linear;
+  animation: opacity 250ms linear, appearanceFromTop 250ms linear;
+}
+
+.sort-menu menuitem {
+  padding: 7px 10px;
+}
+
+.sort-menu menuitem:hover {
+  background-color: rgb(29 78 216 / 0.9);
+  color: #fff;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+/* Cards */
 
 #cards-user {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .card-user {
@@ -59,6 +105,12 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  transition: transform 250ms linear;
+  animation: appearanceFromTop 1s linear;
+}
+
+.card-user:hover {
+  transform: translateY(-10px);
 }
 
 .card-user h3 {
