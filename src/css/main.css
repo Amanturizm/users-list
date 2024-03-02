@@ -22,7 +22,8 @@ main {
   border-radius: 8px;
   background-color: var(--color-danger);
   transition: opacity 1s linear;
-  animation: opacity 1s linear, translateFromRightToLeft 500ms linear;
+  animation: translateFromRightToLeft 500ms linear;
+  z-index: 3;
 }
 
 #alert-error .info-icon {

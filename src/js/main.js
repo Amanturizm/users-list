@@ -1,5 +1,9 @@
 import { fetchData } from './features';
 import { filterUsers, sortUsers } from './options';
+import '../css/global.css';
+import '../css/animations.css';
+import '../css/header.css';
+import '../css/main.css';
 
 const API_URL = 'https://jsonplaceholder.typicode.com/';
 

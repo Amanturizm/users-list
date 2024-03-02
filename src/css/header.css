@@ -15,8 +15,8 @@
 #reload {
   width: 30px;
   height: 30px;
-  background: url("../assets/images/reload.svg") no-repeat;
   border: none;
+  background: none;
   outline: none;
   cursor: pointer;
 }
