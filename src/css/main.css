@@ -29,7 +29,78 @@ main {
   height: 100%;
 }
 
-/* Sort */
+/* Options */
+
+#options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 568px) {
+  #options {
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .filter {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sort-menu {
+    bottom: -50px !important;
+    right: -100px !important;
+  }
+}
+
+.filter-text-field {
+  position: relative;
+}
+
+.filter-input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 3px solid currentColor;
+  padding: calc(0.5rem * 1.5) 0.5rem;
+  color: currentColor;
+  background: transparent;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 10;
+  animation: appearanceFromTop 1s linear;
+}
+
+.filter-input:focus + .filter-label,
+.filter-input:not(:placeholder-shown) + .filter-label {
+  transform: translate(.25rem, -65%) scale(.8);
+  color: #fab700;
+}
+
+.filter-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: calc(0.5rem * 0.75) calc(0.5rem * .5);
+  margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * .5);
+  background: pink;
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  background: var(--color-white);
+  transition: all 120ms ease-in;
+  font-weight: bold;
+  line-height: 1.2;
+  cursor: text;
+  animation: appearanceFromTop 1s linear;
+}
 
 #sort {
   display: flex;
@@ -38,10 +109,15 @@ main {
   width: min-content;
   cursor: pointer;
   position: relative;
+  animation: appearanceFromTop 1s linear;
 }
 
 #sort * {
   white-space: nowrap;
+}
+
+#sort p {
+  font-weight: bold;
 }
 
 #sort span {
@@ -64,27 +140,34 @@ main {
 
 .sort-menu {
   position: absolute;
-  bottom: -70px;
+  bottom: -75px;
+  right: 0;
   display: none;
   flex-direction: column;
   background-color: #fff;
   color: #000;
   overflow: hidden;
   font-size: 1.1rem;
+  border: 2px solid #2222;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   opacity: 0;
+  z-index: 2;
   transition: opacity 250ms linear;
   animation: opacity 250ms linear, appearanceFromTop 250ms linear;
 }
 
 .sort-menu menuitem {
   padding: 7px 10px;
+  font-size: 1rem;
+}
+
+.sort-menu menuitem:not(:last-child) {
+  border-bottom: 2px solid #2222;
 }
 
 .sort-menu menuitem:hover {
-  background-color: rgb(29 78 216 / 0.9);
-  color: #fff;
+  background-color: #2221;
   transition: background-color 0.2s linear, color 0.2s linear;
 }
 

@@ -21,16 +21,29 @@
       <p class="alert-error-message"></p>
     </div>
 
-    <div id="sort">
-      <p>Sort by</p>
-      <span></span>
+    <div id="options">
+      <div class="filter">
+        <div class="filter-text-field">
+          <input class="filter-input" name="username" type="text" placeholder=" "/>
+          <span class="filter-label" datatype="username">Filter by username</span>
+        </div>
 
-      <menu class="sort-menu">
-        <menuitem>username</menuitem>
-        <menuitem>email</menuitem>
-      </menu>
+        <div class="filter-text-field">
+          <input class="filter-input" name="email" type="text" placeholder=" "/>
+          <span class="filter-label" datatype="email">Filter by email</span>
+        </div>
+      </div>
+
+      <div id="sort">
+        <p>Sort by</p>
+        <span></span>
+
+        <menu class="sort-menu">
+          <menuitem>username</menuitem>
+          <menuitem>email</menuitem>
+        </menu>
+      </div>
     </div>
-
     <div id="cards-user"></div>
   </main>
 </body>

@@ -1,6 +1,7 @@
 :root {
   --padding-x: 2rem;
   --color-danger: rgb(239, 68, 68);
+  --color-white: #f0f0f0;
   --borderWidth-thicker: max(4px, 0.25rem);
 }
 
@@ -10,6 +11,6 @@
 }
 
 body {
-  background-color: #f0f0f0;
+  background-color: var(--color-white);
   font-family: Arial, sans-serif;
 }

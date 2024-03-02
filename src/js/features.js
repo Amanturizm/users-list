@@ -40,13 +40,13 @@ export const fetchData = async (url, init) => {
   const data = await fetch(url, init)
     .then(response => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Oops...Something went wrong!');
       }
       return response.json();
     })
     .catch(error => {
       togglePreloader(true);
-      showErrorAlert(error.message || 'Oops...Something went wrong!');
+      showErrorAlert(error.message);
       console.error('There was a problem with the fetch operation:', error);
     }).finally(() => togglePreloader(true));
 

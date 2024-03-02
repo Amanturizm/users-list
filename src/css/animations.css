@@ -16,6 +16,15 @@
   }
 }
 
+@keyframes translateFromTop {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 @keyframes appearanceFromTop {
   from {
     opacity: 0;
